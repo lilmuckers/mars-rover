@@ -14,7 +14,7 @@ This is my implementation of the mars rover problem, that will behave in the fol
     * If a rover falls off the edge of the planet, into the never ending void, it will leave a marker (or scent) that other rovers will be able to detect to avoid the same fate if they enter the square that the previous rover fell from.
     * Rovers will output their final position on this planet before shutting down.
         * If rover is lost, system will detect this loss and return last known "Safe" coordinates of the rover and note that it was lost.
-    * **Assumption**: If a rover attempts to move through a square already occupied by one of its brethren/sistren then it will have the capacity to sidle past uncomfortably like one would on RyanAir flight when waiting for the only functional toilet.
+    * **Assumption**: If a rover attempts to move through a square already occupied by one of its brethren/sistren then it will have the capacity to sidle past.
 
 ## Implementation Details
 This has been written in JavaScript, as it is a decent rapid prototyping language with a well known syntax and grammar, with multiple possible paradigms that can be approached. As well as relatively simple setup.
@@ -26,7 +26,8 @@ This has been written in JavaScript, as it is a decent rapid prototyping languag
     5. `npm test`, `yarn test` - Run all the tests
 
 ### Functional Implementation
- * This solution has been written using functinal programming, and "pure" functions. The "planet" is defined using an object generator containing it's bounding coordinates and current rover states.
+ * This solution has been written using functinal programming, and mostly "pure" functions. ]
+ * The "planet" is defined using an object generator containing it's bounding coordinates and current rover states.
  * The code is contained within the path `./soln_functional`
  * Functions are "pure" and syncronous.
  * Information:

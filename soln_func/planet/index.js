@@ -53,8 +53,13 @@ function update(planet, x, y) {
  * @param {Planet} planet The planet to land on
  * @param {Rover} rover The rover to land
  * @return {Planet}
+ * @throws {Error} if the planet has not been instantiated prior to landing
  */
 function landRover(planet, rover) {
+  if (!planet.instantiated) {
+    throw new Error('The planet has not been bounded');
+  }
+
   const updatedPlanet = { ...planet };
   const updatedRover = { ...rover };
 
@@ -87,7 +92,7 @@ function replaceRover(planet, rover) {
 /**
  * Mark a zone as danger
  * @param {Planet} planet The planet to mark
- * @param {CardinalCoordinates} coords Where to mark
+ * @param {CardinalCoordinate} coords Where to mark
  * @returns {Planet}
  */
 function markDanger(planet, coords) {

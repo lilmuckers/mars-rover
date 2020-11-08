@@ -55,8 +55,8 @@ const roverBase = {
 };
 
 /**
- *
- * @param {CardinalCoordinates} start The starting cardinality
+ * Generate a blank rover
+ * @param {CardinalCoordinate} start The starting cardinality
  */
 function generate(start) {
   const rover = {
@@ -100,8 +100,8 @@ function transformCoordinateByTurning(cmd, direction) {
 
 /**
  * Transform a cardinal coordinate
- * @param {CardinalCoordinates} coordinate The coordinate to move forward by
- * @return {CardinalCoordinates}
+ * @param {CardinalCoordinate} coordinate The coordinate to move forward by
+ * @return {CardinalCoordinate}
  */
 function transformCoordinateByMoving(coordinate) {
   const newCoord = { ...coordinate };
@@ -113,9 +113,9 @@ function transformCoordinateByMoving(coordinate) {
 
 /**
  * Transform an incoming coord by the cmd
- * @param {CardinalCoordinates} coord The position to be transposed
+ * @param {CardinalCoordinate} coord The position to be transposed
  * @param {String} cmd the command string (one of L, R and F)
- * @return {CardinalCoordinates}
+ * @return {CardinalCoordinate}
  */
 function transformCoordinate(coord, cmd) {
   let newCoord = { ...coord };
