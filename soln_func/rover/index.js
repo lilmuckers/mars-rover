@@ -205,7 +205,7 @@ function executeRoverCmds(planet, lineText) {
   const { position: { x, y, direction }, state } = outputRover;
   const stateOutput = state === STATE_LOST ? 'LOST' : '';
 
-  // Adding "END" prefix to make it clear
+  // Adding "END" prefix to make it clearer
   console.log(`END> ${x} ${y} ${direction} ${stateOutput}`);
   return outputPlanet;
 }

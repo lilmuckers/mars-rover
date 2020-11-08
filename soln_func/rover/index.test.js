@@ -3,7 +3,6 @@ const rewire = require('rewire');
 // jest.mock('../planet', () => ({ landRover: mockLandRover }));
 const rover = rewire('./index');
 
-const { executeRoverCmds } = rover;
 const roverBase = rover.__get__('roverBase');
 const generate = rover.__get__('generate');
 const transformCoordinateByTurning = rover.__get__('transformCoordinateByTurning');

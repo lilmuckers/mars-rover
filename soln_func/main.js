@@ -27,7 +27,6 @@ rl.on('line', (input) => {
     planet = runLine(planet, lineType, inputLine);
   } catch (e) {
     console.error(`Process exited with error: ${e.message}`);
-    console.log(e);
-    // process.exit();
+    process.exit();
   }
 });
