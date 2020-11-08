@@ -197,6 +197,10 @@ function executeRoverCmds(planet, lineText) {
   const commandList = lineText.split('');
   const lastRover = planet.rovers.get(planet.rovers.size);
 
+  if (!lastRover) {
+    throw new Error('No rover has yet landed');
+  }
+
   if (lastRover.state !== STATE_IDLE) {
     throw new Error('Rover has already received and executed commands');
   }
